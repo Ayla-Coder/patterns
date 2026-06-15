@@ -1,0 +1,101 @@
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f9f8f5;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+ 
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #1a1a1a;
+    }
+ 
+    .app {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2rem;
+      max-width: 760px;
+      width: 100%;
+    }
+ 
+    canvas {
+      width: 100%;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+ 
+    .buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+    }
+ 
+    button {
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 13px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: white;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+ 
+    button:hover { background: #f0f0f0; }
+    button:active { transform: scale(0.98); }
+ 
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+ 
+    .control label {
+      font-size: 13px;
+      color: #666;
+      display: block;
+      margin-bottom: 4px;
+    }
+ 
+    select, input[type="range"], input[type="color"] {
+      width: 100%;
+    }
+ 
+    select {
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: white;
+      font-size: 14px;
+    }
+ 
+    input[type="range"] {
+      accent-color: #555;
+    }
+ 
+    .color-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+ 
+    input[type="color"] {
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 2px;
+      cursor: pointer;
+    }
+ 
+    @media (max-width: 600px) {
+      .app { grid-template-columns: 1fr; }
+    }
